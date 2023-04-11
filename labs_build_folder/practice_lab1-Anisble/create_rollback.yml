@@ -1,0 +1,20 @@
+---
+- hosts: all
+  gather_facts: false
+  
+  vars:
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_user: admin
+    transport: cli  
+
+  tasks:
+  - name: "Revert NX-OS to recovery configuration"
+    nxos_command:
+      - commands: checkpoint file bootflash:///pre-ansible.config
+    when: ansible_network_os == "nxos"
+
+  - name: "Revert IOS to recovery configuration"
+    ios_command:
+      commands:
+      - command: copy running-config bootflash:pre-ansible.config force 
+    when: ansible_network_os == "ios"

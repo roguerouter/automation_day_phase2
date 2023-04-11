@@ -1,0 +1,16 @@
+all:
+  children:
+    cml_configuration:
+      hosts:
+        local:
+          ansible_host: localhost
+      vars:
+        cml_lab_title: "Practice Lab"
+        cat8kv_r1_mgmt: 172.16.1.101
+        cat8kv_r2_mgmt: 172.16.1.102
+        cat9kv_sw1_mgmt: 172.16.1.103
+        cat9kv_sw2_mgmt: 172.16.1.104
+        n9kv_sw1_mgmt: 172.16.1.105
+        ubuntu_host_eth2: 1.1.1.1
+        ubuntu_host_eth3: 172.16.1.100
+        ubuntu_host_eth4: 192.168.1.100

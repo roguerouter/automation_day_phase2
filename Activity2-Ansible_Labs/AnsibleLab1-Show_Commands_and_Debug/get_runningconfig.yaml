@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: View Configuration
+    ios_command:
+      commands: show ip int brief
+    register: interface_brief
+
+  - debug:
+      var: interface_brief.stdout_lines
