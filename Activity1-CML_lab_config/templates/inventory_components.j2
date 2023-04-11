@@ -36,7 +36,7 @@ all:
     switches:
       hosts:
         cat9kv_sw1:
-          routed_interfaces:
+          switchport_interfaces:
           - name: GigabitEthernet1
             description: "Link to cat8kv_r1"
             enabled: True
@@ -49,8 +49,15 @@ all:
             description: "Link to n9kv_sw1"
             enabled: True
             address: 4.4.4.254/25
+          vlans:
+          - name: vlan_5_ansible
+            id: 5
+            enabled: True
+          - name: vlan_10_ansible
+            id: 10 
+            enabled: True
         cat9kv_sw2:
-          routed_interfaces:
+          switchport_interfaces:
           - name: GigabitEthernet1
             description: "Link to cat8kv_r1"
             enabled: True
@@ -63,8 +70,12 @@ all:
             description: "Link to n9kv_sw1"
             enabled: True
             address: 4.4.4.254/25
+          vlans:
+          - name: vlan_20_ansible
+            id: 20
+            enabled: True
         n9kv_sw1:
-          routed_interfaces:
+          switchport_interfaces:
           - name: GigabitEthernet1
             description: "Link to cat8kv_r1"
             enabled: True
