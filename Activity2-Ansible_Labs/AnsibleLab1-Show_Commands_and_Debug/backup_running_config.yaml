@@ -1,0 +1,36 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+
+  - name: Run IOS show command
+    ios_command:
+      commands: show run
+    register: show_ios_command
+    when: ansible_network_os == "ios"
+
+  - debug:
+      var: show_ios_command.stdout
+    when: ansible_network_os == "ios"
+  
+  #- name: Save output to file
+  #  copy:
+  #    content: "{{ show_ios_command.stdout | replace ('\\n', '\n')  }}"
+  #    dest: ./output/{{inventory_hostname}}.running_config.txt
+  #  when: ansible_network_os == "ios"
+
+  - name: Run NXOS show command
+    nxos_command:
+      commands: show run
+    when: ansible_network_os == "nxos"
+    register: show_nxos_command
+
+  - debug:
+      var: show_nxos_command.stdout
+    when: ansible_network_os == "nxos"
+  
+  #- name: Save output to file
+  #  copy:
+  #    content: "{{ show_nxos_command.stdout | replace ('\\n', '\n')  }}"
+  #    dest: ./output/{{inventory_hostname}}.running_config.txt
+  #  when: ansible_network_os == "nxos"

@@ -3,10 +3,22 @@
   gather_facts: no
   tasks:
 
-  - name: View Configuration
+  - name: Run IOS show command
     ios_command:
-      commands: show version
-    register: show_command
+      commands: show clock
+    register: show_ios_command
+    when: ansible_network_os == "ios"
 
   - debug:
-      var: show_command.stdout_lines
+      var: show_ios_command.stdout_lines
+    when: ansible_network_os == "ios"
+
+  - name: Run NXOS show command
+    nxos_command:
+      commands: show clock
+    when: ansible_network_os == "nxos"
+    register: show_nxos_command
+
+  - debug:
+      var: show_nxos_command.stdout_lines
+    when: ansible_network_os == "nxos"

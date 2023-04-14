@@ -47,4 +47,4 @@ all:
           ansible_network_os: ios
         n9kv_sw1:
           ansible_host: 172.16.1.105
-          ansible_network_os: ios
+          ansible_network_os: nxos
