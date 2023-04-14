@@ -1,0 +1,14 @@
+    switches:
+      hosts:
+        cat9kv_sw1:
+          vlans:
+          - name: Ansible_vlan_5
+            id: 5
+        cat9kv_sw2:
+          vlans:
+          - name: Ansible_vlan_20
+            id: 20
+        n9kv_sw1:
+          vlans:
+          - name: Ansible_vlan_30
+            id: 30

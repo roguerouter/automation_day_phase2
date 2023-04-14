@@ -9,16 +9,17 @@
       - name: "{{ item.name }}"
         description: "{{ item.description }}"
         enabled: "{{ item.enabled }}"
-    loop: "{{ routed_interfaces }}"
+    loop: "{{ switchport_interfaces }}"
     when: ansible_network_os == "ios"
 
-  - name: (IOS) Switchport
+  - name: (IOS) Switchport Access
     cisco.ios.ios_l2_interfaces:
       config:
       - name: "{{item.name}}"
-        ipv4:
-        - address: "{{ item.address }}"
-    loop: "{{ routed_interfaces }}"
+        mode: access
+        access:
+          vlan: "{{item.vlan_id}}"
+    loop: "{{ switchport_interfaces }}"
     when: ansible_network_os == "ios"
   
   - name: (NX-OS) Apply description and enable L2 interfaces
