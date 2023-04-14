@@ -3,7 +3,7 @@
     config:
       servers:
       - server: "{{ ntp_server_ip }}"
-        vrf: default
+        vrf: management
   when: ansible_network_os == "nxos"
 
 - name: "Configure NTP on IOS devices"
