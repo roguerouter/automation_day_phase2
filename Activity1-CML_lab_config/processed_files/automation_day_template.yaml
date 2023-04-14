@@ -1,7 +1,7 @@
 lab:
   description: ''
   notes: ''
-  title: Practice Lab-test
+  title: Practice Lab-test2
   version: 0.2.0
 links:
   - id: l0
@@ -180,7 +180,8 @@ nodes:
       \  E99E7897 40D44FE6 E5DC7816 D0951CEC 458D59B1 2CB350DB C2E675F8 9A38FC06\n\
       \  F562AB58 3C3753ED 1A108D7B 1BA9E2B7 12DCC54C DEBFEB5A F101969D 3DDD4C46\n\
       \  5562F437 D54E5938 3D308152 59EE68FC AD5B6F18\n  \tquit\n!\nlicense udi pid\
-      \ C8000V sn 9GU4MMXZICR\ndiagnostic bootup level minimal\nmemory free low-watermark\
+      \ C8000V sn 9GU4MMXZICR\nlicense boot level network-advantage addon dna-advantage\
+      \ndiagnostic bootup level minimal\nmemory free low-watermark\
       \ processor 68484\n!\n!\nusername netops privilege 15 secret 9 $9$CSv.6TUpfAELY.$0AaopQurkwM5xTIcBcomUi1q6tu0Bm0WhxoA2QiC0Zo\n\
       !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface GigabitEthernet1\n no ip\
       \ address\n shutdown\n negotiation auto\n!\ninterface GigabitEthernet2\n no\
@@ -310,7 +311,8 @@ nodes:
       \  90476DA0 74237ADE 2AF66F60 1BF43B42 1D14A29D E2E83CBE E73AE419 45455479\n\
       \  AE021D51 76158213 8F4C84E5 BC654143 6EA47C49 885D82C1 F1019398 7E2426A7\n\
       \  D6B44878 593B0E8A 9AAF7187 251208B3 2055C0CD\n  \tquit\n!\nlicense udi pid\
-      \ C8000V sn 9GHW3TAB9G2\ndiagnostic bootup level minimal\nmemory free low-watermark\
+      \ C8000V sn 9GHW3TAB9G2\nlicense boot level network-advantage addon dna-advantage\
+      \ndiagnostic bootup level minimal\nmemory free low-watermark\
       \ processor 68484\n!\n!\nusername netops privilege 15 secret 9 $9$CSv.6TUpfAELY.$0AaopQurkwM5xTIcBcomUi1q6tu0Bm0WhxoA2QiC0Zo\n\
       !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface GigabitEthernet1\n no ip\
       \ address\n shutdown\n negotiation auto\n!\ninterface GigabitEthernet2\n no\

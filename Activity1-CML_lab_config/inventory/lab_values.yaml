@@ -5,7 +5,7 @@ all:
         local:
           ansible_host: localhost
       vars:
-        cml_lab_title: "Practice Lab-test"
+        cml_lab_title: "Practice Lab-test2"
         cat8kv_r1_mgmt: 172.16.1.101
         cat8kv_r2_mgmt: 172.16.1.102
         cat9kv_sw1_mgmt: 172.16.1.103
