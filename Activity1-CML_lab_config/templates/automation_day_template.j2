@@ -181,7 +181,7 @@ nodes:
       \  F562AB58 3C3753ED 1A108D7B 1BA9E2B7 12DCC54C DEBFEB5A F101969D 3DDD4C46\n\
       \  5562F437 D54E5938 3D308152 59EE68FC AD5B6F18\n  \tquit\n!\nlicense udi pid\
       \ C8000V sn 9GU4MMXZICR\ndiagnostic bootup level minimal\nmemory free low-watermark\
-      \ processor 68484\n!\n!\nusername netops privilege 15 secret 9 $9$RDKP2yMiaPt15U$OYeUb7pge/7Zom2Uhfk/3PJU0r/RXYu9r8POyxnNnXI\n\
+      \ processor 68484\n!\n!\nusername netops privilege 15 secret 9 $9$CSv.6TUpfAELY.$0AaopQurkwM5xTIcBcomUi1q6tu0Bm0WhxoA2QiC0Zo\n\
       !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface GigabitEthernet1\n no ip\
       \ address\n shutdown\n negotiation auto\n!\ninterface GigabitEthernet2\n no\
       \ ip address\n shutdown\n negotiation auto\n!\ninterface GigabitEthernet3\n\
@@ -1271,11 +1271,14 @@ nodes:
         - [sudo, netplan, generate]
         - [sudo, netplan, apply]
         - sudo apt update
-        - sudo apt install python3-pip git -y
+        - sudo apt install python3-pip git chrony -y
         - pip3 install ansible ansible-pylibssh
         - git clone https://github.com/roguerouter/automation_day_phase2.git /home/netops/automation_day_labs
         - chown -R netops:netops /home/netops/automation_day_labs
         - chmod 775 -R /home/netops/automation_day_labs
+        - sudo bash -c "echo 'pool 10.82.128.254' >> /etc/chrony/chrony.conf"
+        - sudo bash -c "echo 'allow 172.16.1.0/24' >> /etc/chrony/chrony.conf"
+        - sudo systemctl restart chrony
     cpu_limit: null
     cpus: null
     data_volume: null

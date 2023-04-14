@@ -5,8 +5,8 @@
 
   - name: View Configuration
     ios_command:
-      commands: show ip int brief
-    register: interface_brief
+      commands: show version
+    register: show_command
 
   - debug:
-      var: interface_brief.stdout_lines
+      var: show_command.stdout_lines
