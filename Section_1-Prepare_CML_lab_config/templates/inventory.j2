@@ -8,35 +8,9 @@ all:
         cat8kv_r1:
           ansible_host: {{ cat8kv_r1_mgmt }}
           ansible_network_os: ios
-          routed_interfaces:
-          - name: GigabitEthernet1
-            description: "Ubuntu Desktop"
-            enabled: True
-            address: 1.1.1.2/30
-          - name: GigabitEthernet2
-            description: "link to cat9kv_sw1"
-            enabled: True
-            address: 2.2.2.254/24
-          - name: GigabitEthernet3
-            description: "Link to cat8kv_r2"
-            enabled: True
-            address: 3.3.3.1/30
         cat8kv_r2:
           ansible_host: {{cat8kv_r2_mgmt}}
           ansible_network_os: ios
-          routed_interfaces:
-          - name: GigabitEthernet1
-            description: "Link to cat8kv_r1"
-            enabled: True
-            address: 3.3.3.2/30
-          - name: GigabitEthernet2
-            description: "Link to cat9kv_sw2"
-            enabled: True
-            address: 4.4.4.126/25
-          - name: GigabitEthernet3
-            description: "Link to n9kv_sw1"
-            enabled: True
-            address: 4.4.4.254/25
     switches:
       hosts:
         cat9kv_sw1:

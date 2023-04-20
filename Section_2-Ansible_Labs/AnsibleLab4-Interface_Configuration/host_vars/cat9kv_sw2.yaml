@@ -1,0 +1,14 @@
+switchport_interfaces:
+- name: "GigabitEthernet1/0/1"
+  description: "Alpine-1 Desktop"
+  enabled: True
+  vlan_id: 20
+- name: "GigabitEthernet1/0/8"
+  description: "Uplink to cat8kv_rtr2_G2"
+  enabled: True
+  vlan_id: 20
+vlan_interfaces:
+- name: "vlan20"
+  description: "VLAN_20 SVI"
+  address: "4.4.4.125/25"
+  enabled: True
