@@ -1,0 +1,30 @@
+---
+- name: Generate CML Lab Configuration file
+  connection: local
+  hosts: all
+  gather_facts: False
+
+  vars:
+    ansible_connection: local
+    ansible_lab_inventory_path: "./processed_files/cml_lab_config.yaml"
+
+  tasks:
+    - name: "Delete old inventory file from Step3 files (if it exists)"
+      file:
+        path: "{{ ansible_lab_inventory_path }}"
+        state: absent
+
+    - name: "Create Inventory File for Step 3 with Management IPs properly assigned"
+      template:
+        src: ./templates/inventory.j2
+        dest: "{{ ansible_lab_inventory_path }}"
+
+    - name: "Delete old config files for CML if they exist"
+      file:
+        path: "./cml_lab_config.yaml"
+        state: absent
+
+    - name: "Generate Importable CML Configuration that has correct Management IPs for the Example Switches in CML"
+      template:
+        src: ./templates/automation_day_template.j2
+        dest: "./processed_files/automation_day_template.yaml"
