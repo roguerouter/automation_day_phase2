@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - shell: cat automation_day_template.yaml
+      register: templatedata
+
+    - set_fact:
+        myvar: "{{ templatedata.stdout | from_yaml | to_json(indent=4) }}"
+
+    - copy:
+        content: "{{ myvar }}"
+        dest:    automation_day_import.json
