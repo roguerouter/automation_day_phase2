@@ -1,1 +1,205 @@
-{"info":{"_postman_id":"eba62ae4-2762-4ffe-b9db-fffc60f9f1fb","name":"CML","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},"item":[{"name":"CML - Authentication","event":[{"listen":"test","script":{"id":"7a83e489-ea20-4dd6-877b-88eb58c0fd06","exec":["var jsonData = JSON.parse(responseBody);","pm.environment.set(\"token\", jsonData);"],"type":"text/javascript"}}],"id":"2573b694-c06d-44ea-9187-4ed4baa96f73","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"method":"POST","header":[],"body":{"mode":"raw","raw":"{\n  \"username\": \"{{username}}\",\n  \"password\": \"{{password}}\"\n}","options":{"raw":{"language":"json"}}},"url":{"raw":"{{BASE_URL}}/api/v0/authenticate","host":["{{BASE_URL}}"],"path":["api","v0","authenticate"]}},"response":[]},{"name":"View Labs","id":"bcfbd33a-95f8-42be-be5d-b7705ab8fa64","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"auth":{"type":"bearer","bearer":[{"key":"token","value":"{{token}}","type":"string"}]},"method":"GET","header":[],"url":{"raw":"{{BASE_URL}}/api/v0/labs","host":["{{BASE_URL}}"],"path":["api","v0","labs"]}},"response":[]},{"name":"Import Lab","id":"959f93f4-aaa2-4807-8e46-56fdca89351b","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"auth":{"type":"bearer","bearer":[{"key":"token","value":"{{token}}","type":"string"}]},"method":"POST","header":[],"body":{"mode":"raw","raw":""},"url":{"raw":"{{BASE_URL}}/api/v0/import","host":["{{BASE_URL}}"],"path":["api","v0","import"]}},"response":[]},{"name":"Start Lab","id":"aad081e7-22c6-4d19-b333-76ba8a290079","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"auth":{"type":"bearer","bearer":[{"key":"token","value":"{{token}}","type":"string"}]},"method":"PUT","header":[],"body":{"mode":"raw","raw":""},"url":{"raw":"{{BASE_URL}}/api/v0/labs/{{LAB_ID}}/start","host":["{{BASE_URL}}"],"path":["api","v0","labs","{{LAB_ID}}","start"]}},"response":[]},{"name":"Lab Operating State","id":"57fffb37-e12e-4a85-a0f6-448b5a4c4709","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"auth":{"type":"bearer","bearer":[{"key":"token","value":"{{token}}","type":"string"}]},"method":"GET","header":[],"body":{"mode":"raw","raw":""},"url":{"raw":"{{BASE_URL}}/api/v0/labs/{{LAB_ID}}/topology","host":["{{BASE_URL}}"],"path":["api","v0","labs","{{LAB_ID}}","topology"]}},"response":[]}],"variable":[{"id":"edd5f80d-629f-4dc8-901b-e23a195c353e","key":"BASE_URL","value":"https://10.82.128.40"},{"id":"7251a79e-8315-498a-a025-119e1826d0a6","key":"LAB_ID","value":"a929a918-3408-48bf-8984-04a1c2ec63e6"}]}
+{
+	"info": {
+		"_postman_id": "45ad2ab2-77cf-4684-a2c6-8018cc5ecc00",
+		"name": "CML",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27020049"
+	},
+	"item": [
+		{
+			"name": "CML - Authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"pm.environment.set(\"token\", jsonData);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"{{username}}\",\n  \"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v0/authenticate",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Labs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v0/labs",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"labs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Lab",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v0/import",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Lab",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v0/labs/{{LAB_ID}}/start",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"labs",
+						"{{LAB_ID}}",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lab Operating State",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v0/labs/{{LAB_ID}}/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v0",
+						"labs",
+						"{{LAB_ID}}",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
