@@ -2,7 +2,7 @@
 
 This repository contains practice labs for the Automation Day event hands-on experience.  The sample diagram for the lab can be found below for reference.
 
-![alt text](./diagram/lab_with_all_connections.png "Automation Day Diagram")
+![alt text](./images/lab_with_all_connections.png "Automation Day Diagram")
 
 The content is broken up into the following sections:
 
