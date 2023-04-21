@@ -21,4 +21,4 @@ An Application Programming Interface (API) provides an interface by which we can
 
 **Demo of Actions**
 
-![alt text](./images/import_postman.gif "Importing Postman Environment and Collections")
+![alt text](../images/import_postman.gif "Importing Postman Environment and Collections")
