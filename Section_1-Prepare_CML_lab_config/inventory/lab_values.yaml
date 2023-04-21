@@ -5,12 +5,14 @@ all:
         local:
           ansible_host: localhost
       vars:
+        
         cml_lab_title: "Practice Lab"
         cat8kv_r1_mgmt: 172.16.1.101
         cat8kv_r2_mgmt: 172.16.1.102
         cat9kv_sw1_mgmt: 172.16.1.103
         cat9kv_sw2_mgmt: 172.16.1.104
         n9kv_sw1_mgmt: 172.16.1.105
+        ubuntu_hostname: studentlab1
         ubuntu_host_ens2: "10.82.86.161/24"
         ubuntu_host_ens2_gw: "10.82.86.1"
         domain_name: ansible.lab

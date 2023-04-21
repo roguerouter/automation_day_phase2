@@ -14,7 +14,7 @@ Included in this directory are the following files and folders:
 
 ### A Note on altering inventory
 
-The values listed below in lab_values.yaml can be altered for your environment.  The ubuntu_host_ens2 and ubuntu_host_ens2_gw variables should point to an internet facing connection.  ENS2 is attached to the External Connector, operating in "bridge mode", that allows the ubuntu host to download necessary packages, clone this repository, and provide SSH access to run the playbooks.  The management and ubuntu_host_ens3 addresses can be changed as desired, so long as they are all in the same subnet.  You must assign the appropriate prefix mask for Ubuntu hosts that you change.
+The values listed below in lab_values.yaml can be altered for your environment.  The ubuntu_host_ens2 and ubuntu_host_ens2_gw variables in this lab point to an internet facing connection, and if changed need to be on a subnet that can reach the internet as well.  ENS2 is attached to the External Connector, operating in "bridge mode", that allows the ubuntu host to download necessary packages, clone this repository, and provide SSH access to run the playbooks. Your dns1 variable should use the DNS server IP of your local subnet, for home systems this is generally your router GW address or a public DNS like google on 8.8.8.8.  If ENS2 cannot reach the internet the cloud-config will fail to deploy and your lab will not operate.  The management and ubuntu_host_ens3 addresses can be changed as desired, so long as they are all in the same subnet.  You must assign the appropriate prefix mask for Ubuntu hosts that you change.
 
 ```
         cml_lab_title: "Practice Lab"

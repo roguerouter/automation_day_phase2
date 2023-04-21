@@ -17,6 +17,20 @@ The content is broken up into the following sections:
 
 Each section contains a dedicated ReadMe that further explains how the content in that section/lab works.
 
+## Recommedations
+
+The labs in this environment recommends the following items:
+
+* Visual Studio Code
+* Visual Studio Code - Extensions
+   * Remote - SSH (From Microsoft)
+   * YAML (from Red Hat) 
+* Cisco Modeling Labs Server or equivalent (GNS3 or EVE-NG)
+
+Visual Studio Code with Remote-SSH gives you the capability to access the repository content on a Linux host running in CML.  This eliminates the requirement to have a dedicated Linux or Mac host to run the labs contained within.  '
+
+It is recommended that you do not change any of the IP addressing within the lab environment except those addresses that are explicitly called out in Section_1-Prepare_CML_Lab_Config.  If you wish to change any of the internal IP addressing, the Ubuntu host needs additional routes added to allow it to communicate with the alternate IP addresses.  If you are comfortable editing the Jinja template for the lab, you may alter the routing configuration before deployment.  ENS4 is the router facing network device in the lab.
+
 ## Outcomes
 
 Customers attending this event will learn how to leverage Ansible, and Postman to configure their lab environments.  The network environment will be provisioned entirely through the use of Ansible's built in modules.  The Ansible lab will demonstrate:
