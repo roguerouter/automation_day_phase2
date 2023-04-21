@@ -20,6 +20,8 @@ ansible-playbook *playbook* -u *username* -k
 ```
 The -k option allows us to send the ssh password for the lab.  When prompted, use *netops_admin*
 
-* ansible-playbook show_commands.yaml -k
-* ansible-playbook save_ios_config.yaml -k
-* ansible-playbook save_nxos_config.yaml -k
+```
+ansible-playbook show_commands.yaml -k
+ansible-playbook save_ios_config.yaml -k
+ansible-playbook save_nxos_config.yaml -k
+```

@@ -12,3 +12,10 @@ vlan_interfaces:
   address: "2.2.2.253/24"
   description: "VLAN_5 SVI"
   enabled: True
+shutdown_interfaces:
+- name: "GigabitEthernet1/0/2"
+- name: "GigabitEthernet1/0/3"
+- name: "GigabitEthernet1/0/4"
+- name: "GigabitEthernet1/0/5"
+- name: "GigabitEthernet1/0/6"
+- name: "GigabitEthernet1/0/7"

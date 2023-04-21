@@ -12,3 +12,5 @@ vlan_interfaces:
    description: "VLAN_30 SVI"
    address: "4.4.4.253/25"
    enabled: True
+shutdown_interfaces:
+- name: "Ethernet1/3"

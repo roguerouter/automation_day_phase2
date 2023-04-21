@@ -23,6 +23,8 @@ Our NTP server is located on our Ubuntu host, running on at *172.16.1.100*.  Cop
 
 Below are a couple commands to test Ansible operation.  The first command runs the playbook on all hosts.  For the second, update the banner file, save the contents and run the playbook with --tag banner.  Only the banner task will run and it will update all the host.  Finally the last command allows us to limit the banner job to only our Nexus host.  Update banner again and run the job.  Look at the host in SSH to the management address or look at CML and see what the results look like on the CLI.
 
-* ansible-playbook basic_system_config.yaml -k
-* ansible-playbook basic_system_config.yaml -k --tag banner
-* ansible-playbook basic_system_config.yaml -k --tag banner --limit "n9kv-sw1"
+```
+ansible-playbook basic_system_config.yaml -k
+ansible-playbook basic_system_config.yaml -k --tag banner
+ansible-playbook basic_system_config.yaml -k --tag banner --limit "n9kv-sw1"
+```
