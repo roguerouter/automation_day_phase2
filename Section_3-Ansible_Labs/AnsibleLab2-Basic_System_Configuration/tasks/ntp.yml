@@ -9,6 +9,7 @@
 - name: "Configure NTP on IOS devices"
   cisco.ios.ios_ntp_global:
     config:
-      servers:
+      servers: 
       - server: "{{ ntp_server_ip }}"
+        vrf: Mgmt-vrf
   when: ansible_network_os == "ios"

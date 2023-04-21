@@ -27,3 +27,10 @@ Customers attending this event will learn how to leverage Ansible, and Postman t
 * Understand Ansible playbook structure and considerations for building playbooks.
 * Creating playbooks that support both NX-OS and IOS-XE platforms
 * Creating playbooks to perform 'show' commands and view the output.
+
+## Credentials
+
+The username and password for all switches and linux hosts in this lab are as follows:
+
+* Username: netops
+* Password: netops_admin
