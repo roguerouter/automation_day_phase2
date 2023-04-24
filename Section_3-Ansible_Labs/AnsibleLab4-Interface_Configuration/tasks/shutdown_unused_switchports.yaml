@@ -1,5 +1,5 @@
 ---
-- name: (IOS) Apply description and enable L2 interfaces
+- name: (IOS) Apply description and shutdown L2 interfaces
   cisco.ios.ios_interfaces:
     config:
     - name: "{{ item.name }}"
@@ -8,7 +8,7 @@
   loop: "{{ shutdown_interfaces }}"
   when: ansible_network_os == "ios"
 
-- name: (IOS) Switchport Access
+- name: (IOS) Move unused ports to VLAN 999
   cisco.ios.ios_l2_interfaces:
     config:
     - name: "{{item.name}}"
@@ -18,7 +18,7 @@
   loop: "{{ shutdown_interfaces }}"
   when: ansible_network_os == "ios"
 
-- name: (NX-OS) Apply description and enable L2 interfaces
+- name: (NX-OS) Apply description and shutdown L2 interfaces
   cisco.nxos.nxos_interfaces:
     config:
     - name: "{{ item.name }}"
@@ -27,7 +27,7 @@
   loop: "{{ shutdown_interfaces }}"
   when: ansible_network_os == "nxos"
 
-- name: (NX-OS) Configure IP on interfaces
+- name: (NX-OS) Move unused ports to VLAN 999
   cisco.nxos.nxos_l2_interfaces:
     config:
     - name: "{{ item.name }}"

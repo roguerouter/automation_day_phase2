@@ -8,7 +8,7 @@
   loop: "{{ switchport_interfaces }}"
   when: ansible_network_os == "ios"
 
-- name: (IOS) Switchport Access
+- name: (IOS) Configure Switchport Access and VLAN
   cisco.ios.ios_l2_interfaces:
     config:
     - name: "{{item.name}}"
@@ -27,7 +27,7 @@
   loop: "{{ switchport_interfaces }}"
   when: ansible_network_os == "nxos"
 
-- name: (NX-OS) Configure IP on interfaces
+- name: (NX-OS) Configure Switchport Access and VLAN
   cisco.nxos.nxos_l2_interfaces:
     config:
     - name: "{{ item.name }}"

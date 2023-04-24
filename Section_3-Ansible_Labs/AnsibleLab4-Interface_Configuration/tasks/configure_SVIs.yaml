@@ -32,7 +32,7 @@
   loop: "{{ vlan_interfaces }}"
   when: ansible_network_os == "nxos"
 
-- name: (NX-OS) Configure IP on interfaces
+- name: (NX-OS)  Configure SVI IP Address
   cisco.nxos.nxos_l3_interfaces:
     config:
     - name: "{{item.name}}"

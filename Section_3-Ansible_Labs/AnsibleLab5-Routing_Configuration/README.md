@@ -15,3 +15,27 @@ After running these playbooks, you will have complete IP reachability.  Allow ti
 ```
 ansible-playbook ospf_routing.yaml -k
 ```
+
+### Tests
+
+When this lab is complete, you should be able to perform the following:
+
+- Verify all interfaces are up.  It may take some time for OSPF to come up after running the playbook.
+
+  - ping 2.2.2.254
+  - ping 2.2.2.253
+  - ping 3.3.3.1
+  - ping 3.3.3.2
+  - ping 4.4.4.254
+  - ping 4.4.4.253
+  - ping 4.4.4.126
+  - ping 4.4.4.125
+  - ping 2.2.2.100
+  - ping 4.4.4.64
+  - ping 4.4.4.192
+
+- ssh to alpine-0, alpine-1, alpine-02
+
+  - ssh netops@2.2.2.100
+  - ssh netops@4.4.4.64
+  - ssh netops@4.4.4.192
