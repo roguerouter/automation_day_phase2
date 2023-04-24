@@ -32,6 +32,6 @@
     config:
     - name: "{{ item.name }}"
       access:
-        vlan: "{{ item.vlan }}"
+        vlan: "{{ item.vlan_id }}"
   loop: "{{ switchport_interfaces }}"
   when: ansible_network_os == "nxos"

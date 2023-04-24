@@ -1,15 +1,18 @@
 ---
 - hosts: routers
   gather_facts: false
-
-  cisco.ios.ios_ospfv2:
-    config:
-      processes:
-      - process_id: "{{ item.process_id }}"
-        areas:
-        - area_id: "{{item.area_id}}"
-        network:
-          - address: "{{ item.network_addr}}"
-            wildcard_bits: "{{ item.wildcard}}"
-            area: "{{ item.network_area }}"
-    loop: "{{ ospf }}"
+  
+  tasks:
+  
+  - name: Configure OSPF Routers on Cat8k Routers
+    cisco.ios.ios_ospfv2:
+      config:
+        processes:
+        - process_id: "{{ item.process_id }}"
+          areas:
+          - area_id: "{{item.area_id}}"
+          network:
+            - address: "{{ item.network_addr}}"
+              wildcard_bits: "{{ item.wildcard}}"
+              area: "{{ item.network_area }}"
+      loop: "{{ ospf }}"

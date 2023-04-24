@@ -1,4 +1,5 @@
 lab_build_folder
+Section_0-Pipeline/
 Section_1-Prepare_CML_Lab_Config/processed_files/*
 Section_2-Simple_API/automation_day_import.json
 Section_3-Ansible_Labs/AnsibleLab6-Validation
