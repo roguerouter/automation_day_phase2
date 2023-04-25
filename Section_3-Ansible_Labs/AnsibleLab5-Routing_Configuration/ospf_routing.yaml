@@ -15,4 +15,4 @@
             - address: "{{ item.network_addr}}"
               wildcard_bits: "{{ item.wildcard}}"
               area: "{{ item.network_area }}"
-      loop: "{{ ospf }}"
+    loop: "{{ ospf }}"

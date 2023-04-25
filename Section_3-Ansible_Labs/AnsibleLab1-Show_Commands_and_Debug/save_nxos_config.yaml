@@ -1,5 +1,5 @@
 ---
-- hosts: nx9kv_sw1
+- hosts: n9kv_sw1
   gather_facts: no
 
   tasks:
