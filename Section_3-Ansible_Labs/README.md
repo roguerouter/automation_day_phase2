@@ -4,4 +4,4 @@ At the completion of the labs in this directory you should have a fully operatio
 
 Full Topology
 
-![alt text](./images/lab_with_annotations.png "Automation Day Diagram with Annotations")
+![alt text](../images/lab_with_annotations.png "Automation Day Diagram with Annotations")

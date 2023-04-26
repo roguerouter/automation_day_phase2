@@ -10,6 +10,11 @@
     cml_lab_path: "./processed_files/automation_day_template.yaml"
 
   tasks:
+    - name: "Create processed_files directory"
+      file:
+        path: "./processed_files"
+        state: directory
+
     - name: "Delete old inventory file from Step3 files (if it exists)"
       file:
         path: "{{ ansible_lab_inventory_path }}"

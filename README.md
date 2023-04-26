@@ -25,9 +25,10 @@ The labs in this environment recommends the following items:
 * Visual Studio Code - Extensions
    * Remote - SSH (From Microsoft)
    * YAML (from Red Hat) 
-* Cisco Modeling Labs Server or equivalent (GNS3 or EVE-NG)
+   * Jinja (Authored by: wholroyd)
+* Cisco Modeling Labs Server or equivalent (GNS3 or EVE-NG, but you will need to prepare the lab environment yourself)
 
-Visual Studio Code with Remote-SSH gives you the capability to access the repository content on a Linux host running in CML.  This eliminates the requirement to have a dedicated Linux or Mac host to run the labs contained within.  '
+Visual Studio Code with Remote-SSH gives you the capability to access the repository content on a Linux host running in CML.  This eliminates the requirement to have a dedicated Linux or Mac host to run the labs contained within.  Instructions for installing Remote-SSH can be found in the instructions folder 
 
 It is recommended that you do not change any of the IP addressing within the lab environment except those addresses that are explicitly called out in Section_1-Prepare_CML_Lab_Config.  If you wish to change any of the internal IP addressing, the Ubuntu host needs additional routes added to allow it to communicate with the alternate IP addresses.  If you are comfortable editing the Jinja template for the lab, you may alter the routing configuration before deployment.  ENS4 is the router facing network device in the lab.
 
