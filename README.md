@@ -21,8 +21,8 @@ Each section contains a dedicated ReadMe that further explains how the content i
 
 The labs in this environment recommends the following items:
 
-* Visual Studio Code
-* Visual Studio Code - Extensions
+* Visual Studio Code (not Visual Studio)
+* Visual Studio Code - Extensions (See Installation Instruction below)
    * Remote - SSH (From Microsoft)
    * YAML (from Red Hat) 
    * Jinja (Authored by: wholroyd)
@@ -31,6 +31,18 @@ The labs in this environment recommends the following items:
 Visual Studio Code with Remote-SSH gives you the capability to access the repository content on a Linux host running in CML.  This eliminates the requirement to have a dedicated Linux or Mac host to run the labs contained within.  Instructions for installing Remote-SSH can be found in the instructions folder 
 
 It is recommended that you do not change any of the IP addressing within the lab environment except those addresses that are explicitly called out in Section_1-Prepare_CML_Lab_Config.  If you wish to change any of the internal IP addressing, the Ubuntu host needs additional routes added to allow it to communicate with the alternate IP addresses.  If you are comfortable editing the Jinja template for the lab, you may alter the routing configuration before deployment.  ENS4 is the router facing network device in the lab.
+
+## Installation Instructions
+
+Extensions for Visual Studio Code (VScode) can be downloaded from the VScode marketplace.  The marketplace is denoted by the below icon:
+
+![alt text](./images/vscode_extensions.png "VScode extensions marketplace")
+
+Click on the extensions market place icon and you will be presented with a search bar to "Search Extensions in Marketplace".  Search each extension listed above and verify the author/publisher.  Installation can be done by clicking the Install button next to the listed extension or selecting the extension and clicking install from the new window.  You can see both options for doing an install of the YAML extension in the image below.
+
+![alt text](./images/YAML_install_ex.png "Install YAML example")
+
+Some extensions may require VScode to reload.  Complete all extension installs before reloading the application
 
 ## Outcomes
 
