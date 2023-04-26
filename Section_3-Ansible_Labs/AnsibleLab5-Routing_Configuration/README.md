@@ -5,15 +5,14 @@ The final piece of the lab configuration.  After running the playbook in this la
 ## Folder and playbook details
 
 * host_vars - Contains the networks, area, and process associated with the device being configured.  The ospf configuration is created in a list for ease of configuration.
-* ospf_routing.yaml - Ansible playbook, this will run a task that will loop through the lists in each host_var file and configure OSPF on the upstream device.
-
+* configure_routing.yaml - Ansible playbook, this will run a task that will loop through the lists in each host_var file and configure OSPF on the upstream device.  Additionally, three additional tasks will run to create a static route on cat9kv_sw1, cat9kv_sw2, and n9kv_sw1 pointing to their respective default gateway.
 
 ### How to run the playbooks
 
 After running these playbooks, you will have complete IP reachability.  Allow time for the adjacenies to establish before trying to ping.
 
 ```
-ansible-playbook ospf_routing.yaml -k
+ansible-playbook configure routing_routing.yaml -k
 ```
 
 ### Tests
@@ -34,7 +33,7 @@ When this lab is complete, you should be able to perform the following:
   - ping 4.4.4.64
   - ping 4.4.4.192
 
-- ssh to alpine-0, alpine-1, alpine-02
+- ssh to alpine-0, alpine-1, alpine-2
 
   - ssh netops@2.2.2.100
   - ssh netops@4.4.4.64
