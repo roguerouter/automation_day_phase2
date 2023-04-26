@@ -13,10 +13,10 @@ all:
         cat9kv_sw2_mgmt: 172.16.1.104
         n9kv_sw1_mgmt: 172.16.1.105
         ubuntu_hostname: studentlab1
-        ubuntu_host_ens2: "10.82.86.161/24"
-        ubuntu_host_ens2_gw: "10.82.86.1"
+        ubuntu_host_ens2: "10.82.128.50/25"
+        ubuntu_host_ens2_gw: "10.82.128.126"
         domain_name: ansible.lab
-        dns1: "10.82.128.1"
+        dns1: "10.82.6.1"
         ubuntu_host_ens3: "172.16.1.100/24"
         ubuntu_host_ens4: "1.1.1.1/30"
         alpine0_hostname: "alpine-0"
