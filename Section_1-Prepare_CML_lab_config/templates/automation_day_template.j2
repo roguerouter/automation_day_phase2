@@ -476,7 +476,7 @@ nodes:
       !\ninterface Vlan1\n no ip address\n!\nip forward-protocol nd\nip tcp mss 1280\n\
       ip tcp window-size 212000\nip http server\nip http authentication local\nip\
       \ http secure-server\nip http client source-interface GigabitEthernet0/0\nip\
-      \ route vrf Mgmt-vrf 0.0.0.0 0.0.0.0 1.1.1.1\nip ssh bulk-mode 131072\nip ssh\
+      \ route vrf Mgmt-vrf 0.0.0.0 0.0.0.0 172.16.1.254\nip ssh bulk-mode 131072\nip ssh\
       \ source-interface GigabitEthernet0/0\n!\n!\n!\n!\n!\n!\ncontrol-plane\n service-policy\
       \ input system-cpp-policy\n!\n!\nline con 0\n exec-timeout 0 0\n privilege level\
       \ 15\n login\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n privilege level\
@@ -1026,17 +1026,17 @@ nodes:
                 ens4:
                   addresses: [{{ubuntu_host_ens4}}]
                   routes:
-                    - to: 2.2.2.0/24
-                      via: 1.1.1.2
+                    - to: 192.168.2.0/24
+                      via: 192.168.1.2
                       metric: 2
-                    - to: 3.3.3.0/24
-                      via: 1.1.1.2
+                    - to: 192.168.3.0/24
+                      via: 192.168.1.2
                       metric: 2
-                    - to: 4.4.4.0/25
-                      via: 1.1.1.2
+                    - to: 192.168.4.0/25
+                      via: 192.168.1.2
                       metric: 2
-                    - to: 4.4.4.128/25
-                      via: 1.1.1.2
+                    - to: 192.168.4.128/25
+                      via: 192.168.1.2
                       metric: 2
 
       runcmd:
@@ -1048,7 +1048,6 @@ nodes:
         - git clone https://github.com/roguerouter/automation_day_phase2.git /home/netops/automation_day_labs
         - chown -R netops:netops /home/netops/automation_day_labs
         - chmod 775 -R /home/netops/automation_day_labs
-        - sudo bash -c "echo 'pool 10.82.128.254' >> /etc/chrony/chrony.conf"
         - sudo bash -c "echo 'allow 172.16.1.0/24' >> /etc/chrony/chrony.conf"
         - sudo systemctl restart chrony
     cpu_limit: null

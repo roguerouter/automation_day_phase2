@@ -26,7 +26,7 @@
             routes:
             - dest: 0.0.0.0/0
               next_hops:
-              - forward_router_address: "2.2.2.254"
+              - forward_router_address: "192.168.2.254"
                 name: default
     when: "'cat9kv_sw1' in inventory_hostname"
   
@@ -38,7 +38,7 @@
             routes:
             - dest: 0.0.0.0/0
               next_hops:
-              - forward_router_address: "4.4.4.126"
+              - forward_router_address: "192.168.4.126"
                 name: default
     when: "'cat9kv_sw2' in inventory_hostname"
 
@@ -50,5 +50,5 @@
             routes:
             - dest: 0.0.0.0/0
               next_hops:
-              - forward_router_address: "4.4.4.254"
+              - forward_router_address: "192.168.4.254"
     when: "'n9kv_sw1' in inventory_hostname"
