@@ -10,7 +10,7 @@ switchport_interfaces:
 vlan_interfaces:
  - name: "vlan30"
    description: "VLAN_30 SVI"
-   address: "4.4.4.253/25"
+   address: "192.168.4.253/25"
    enabled: True
 shutdown_interfaces:
 - name: "Ethernet1/3"

@@ -1,1 +1,0 @@
-# Ansible Lab 6 - Validation

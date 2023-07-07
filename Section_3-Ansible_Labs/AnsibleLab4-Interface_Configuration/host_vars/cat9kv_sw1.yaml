@@ -9,7 +9,7 @@ switchport_interfaces:
   vlan_id: 5
 vlan_interfaces:
 - name: "vlan5"
-  address: "2.2.2.253/24"
+  address: "192.168.2.253/24"
   description: "VLAN_5 SVI"
   enabled: True
 shutdown_interfaces:

@@ -6,28 +6,28 @@ all:
           ansible_host: localhost
       vars:
         
-        cml_lab_title: "Practice Lab"
+        cml_lab_title: "Automation Day Labs"
         cat8kv_r1_mgmt: 172.16.1.101
         cat8kv_r2_mgmt: 172.16.1.102
         cat9kv_sw1_mgmt: 172.16.1.103
         cat9kv_sw2_mgmt: 172.16.1.104
         n9kv_sw1_mgmt: 172.16.1.105
         ubuntu_hostname: studentlab1
-        ubuntu_host_ens2: "10.82.128.50/25"
-        ubuntu_host_ens2_gw: "10.82.128.126"
+        ubuntu_host_ens2: "10.1.1.1/24"
+        ubuntu_host_ens2_gw: "10.1.1.254"
         domain_name: ansible.lab
-        dns1: "10.82.6.1"
+        dns1: "8.8.8.8"
         ubuntu_host_ens3: "172.16.1.100/24"
-        ubuntu_host_ens4: "1.1.1.1/30"
+        ubuntu_host_ens4: "192.168.1.1/30"
         alpine0_hostname: "alpine-0"
-        alpine0_eth0_ip: "2.2.2.100"
+        alpine0_eth0_ip: "192.168.2.100"
         alpine0_eth0_mask: "/24"
-        alpine0_eth0_gw: "2.2.2.254"
+        alpine0_eth0_gw: "192.168.2.254"
         alpine1_hostname: "alpine-1"
-        alpine1_eth0_ip: "4.4.4.64"
+        alpine1_eth0_ip: "192.168.4.64"
         alpine1_eth0_mask: "/25"
-        alpine1_eth0_gw: "4.4.4.126"
+        alpine1_eth0_gw: "192.168.4.126"
         alpine2_hostname: "alpine-2"
-        alpine2_eth0_ip: "4.4.4.192"
+        alpine2_eth0_ip: "192.168.4.192"
         alpine2_eth0_mask: "/25"
-        alpine2_eth0_gw: "4.4.4.254"
+        alpine2_eth0_gw: "192.168.4.254"
